@@ -1,0 +1,36 @@
+.spinning {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-left-color: #09f;
+  animation: spin 1s linear infinite;
+}
+
+.spinning.hidden {
+  display: none;
+}
+
+.spinning-inner {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-bottom-color: #09f;
+  animation: spin 1.6s linear infinite;
+  position: absolute;
+  left: -3px;
+  top: -3px;
+  /* animation: spin-reverse 1s linear infinite; */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
